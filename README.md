@@ -37,37 +37,37 @@ insight.download_images()
 
 ### Attributes
 
-#### insight.results_per_page
+#### `insight.results_per_page`
 
 * Default value: 100
 
 * Type: int
 
-#### insight.page
+#### `insight.page`
 
 * Default value: 0
 
 * Type: int
 
-#### insight.start_sol
+#### `insight.start_sol`
 
 * Default value: 1
 
 * Type: int
 
-#### insight.end_sol
+#### `insight.end_sol`
 
 * Default value: 5
 
 * Type: int
 
-#### insight.camera
+#### `insight.camera`
 
 * Default value: "icc"
 
 * Type: str
 
-#### insight.output_directory
+#### `insight.output_directory`
 
 * Default value: "images"
 
