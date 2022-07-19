@@ -8,64 +8,67 @@ down.
 
 Also never made a library before so should be an experience.
 
-### Requirements
+## Requirements
 
 * python-requests
 
 * Python 3.10+ (not sure if any older versions work)
 
-### Documentation
+## Documentation
 
 **Note:** does not yet support switching pages.
 
-#### Defaults
+### Defaults
 
-```
-results_per_page: int = 100
-page: int = 0
-start_sol: int = 1
-end_sol: int = 5
-camera: str = "idc"
-image_directory: str = "images"
-```
-
-#### Example Program
+### Example Program
 
 ```python
 import insight
 
 insight = insight.Insight()
 
-insight.set_results_per_page(25)
-insight.set_sol_range(1, 20)
-insight.set_camera("idc")
+insight.start_sol = 1 # Default values
+insight.end_sol = 5 # Default values
+insight.camera = "icc" # Default values
 
+# Download images from the ICC camera from Sol 1 to 5
 insight.download_images()
 ```
 
-#### `set_results_per_page([results])`
+### Attributes
 
-Values:
+#### insight.results_per_page
 
-* `results`: optional. Defaults to 100 results per page.
+* Default value: 100
 
-#### `set_sol_range([start, end])`
+* Type: int
 
-Values:
+#### insight.page
 
-* `start`: optional. Defaults to 1.
-* `end`: optional. Defaults to 5.
+* Default value: 0
 
-#### `set_camera([camera])`
+* Type: int
 
-Values:
+#### insight.start_sol
 
-* `camera`: optional. Defaults to `"icc"`.
+* Default value: 1
 
-#### `set_save_directory([directory])`
+* Type: int
 
-Values:
+#### insight.end_sol
 
-* `directory`: optional. Defaults to `"images"` in the current directory. No
-  need for a trailing slash as it is covered by the library.
+* Default value: 5
 
+* Type: int
+
+#### insight.camera
+
+* Default value: "icc"
+
+* Type: str
+
+#### insight.output_directory
+
+* Default value: "images"
+
+* Type: str
