@@ -29,6 +29,20 @@ camera: str = "idc"
 image_directory: str = "images"
 ```
 
+#### Example Program
+
+```python
+import insight
+
+insight = insight.Insight()
+
+insight.set_results_per_page(25)
+insight.set_sol_range(1, 20)
+insight.set_camera("idc")
+
+insight.download_images()
+```
+
 #### `set_results_per_page([results])`
 
 Values:
@@ -52,6 +66,6 @@ Values:
 
 Values:
 
-* `directory`: optional. Defaults to `"images"`. No need for a trailing slash
-  as it is covered by the library.
+* `directory`: optional. Defaults to `"images"` in the current directory. No
+  need for a trailing slash as it is covered by the library.
 
